@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Messinasansweb';
+  src: url('https://dl.dropboxusercontent.com/s/bqp3kji13tyucp2/MessinaSansWeb-Bold.woff2?raw=1') format('woff2'), 
+	  url('https://dl.dropboxusercontent.com/s/gkffp1frcaz2qph/MessinaSansWeb-Bold.woff?raw=1') format('woff'), 
+	  url('https://dl.dropboxusercontent.com/s/dumn5l0tsgu4imu/MessinaSansWeb-Bold.eot?raw=1') format('embedded-opentype'), 
+	  url('https://dl.dropboxusercontent.com/s/kdd5bquf4ie3cac/MessinaSansWeb-RegularItalic.otf?raw=1') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
