@@ -2,286 +2,150 @@
 <html>
 
 <head>
-    <!--HYPOTHESIS SCRIPTS -->
-    <style>
-    * {
-    font-family: sans-serif;
-    box-sizing: border-box;
-}
+<script>
+			const bodyElem = document.querySelector('body');
+			window.hypothesisConfig = function() {
+				return {
+					onLayoutChange: function(info) {
+						if (info.expanded) {
+							bodyElem.classList.add('is-open');
+						} else {
+							bodyElem.classList.remove('is-open');
+						}
+					},
+					externalContainerSelector: '.hypothesis-container',
+					branding: {
+						accentColor: 'red',
+						appBackgroundColor: '#0000',
+						ctaBackgroundColor: '',
+						ctaTextColor: '',
+						selectionFontFamily: 'Garamond, serif',
+						annotationFontFamily: ''
+					}
+				}
+			}
+		</script>
+		<script src="https://hypothes.is/embed.js" async></script>
+		<script>
+			// we're looking for an element `.annotator-frame`
+			var hypothesisElemSelector = '.annotator-frame';
+			document.addEventListener('DOMContentLoaded', function() {});
 
-body {
-    margin: 0;
-    padding: 0;
-}
+			function listenForHypothesis() {
+				// Select the node that will be observed for mutations
+				const targetNode = document.querySelector(hypothesisElemSelector);
+				// Options for the observer (which mutations to observe)
+				const config = {
+					attributes: true,
+					childList: false,
+					subtree: false
+				};
+				// Callback function to execute when mutations are observed
+				const callback = function(mutationsList, observer) {
+					for (let mutation of mutationsList) {
+						if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+							console.log('The ' + mutation.attributeName + ' attribute was modified.');
+							if (targetNode.classList.contains('annotator-collapsed')) {
+								bodyElem.classList.remove('is-open');
+								console.log('Collapsed!')
+							} else {
+								console.log('Open!');
+								// check if we should open
+								bodyElem.classList.add('is-open');
+							}
+						}
+					}
+				};
+				// Create an observer instance linked to the callback function
+				const observer = new MutationObserver(callback);
+				// Start observing the target node for configured mutations
+				observer.observe(targetNode, config);
+			}
 
+			function initHypothesisWatcher() {
+				var timer;
+				if (!document.querySelector(hypothesisElemSelector)) {
+					console.log('Did not find hypothesis; retrying in 1 second.');
+					// cancel timer and retry
+					if (timer) {
+						window.clearTimeout(timer);
+					}
+					timer = window.setTimeout(function() {
+						initHypothesisWatcher();
+					}, 1000);
+				} else {
+					console.log('Found hypothesis! :D')
+					// kill timers
+					if (timer) {
+						window.clearTimeout(timer);
+					}
+					// ready, lanch the listner
+					listenForHypothesis();
+				}
+			}
+		</script>
+	<style>
+	
 
-.article-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: row;
-}
-
-.left-side {
-    width: auto;
-    border: 1px solid red;
-    margin-right: 10px;
-    padding: 5px;
-    flex-grow: 1;
-}
-
-.right-side {
-    border: 1px solid green;
-    position: sticky;
-    top: 0;
-    padding: 0px;
-    width: 350px;
-    height: 100vh;
-    background: rgba(244, 244, 244)
-}
-
-/**
- HYPOTHESIS LAYOUT */
+/* Create styles for wrapper */
 .hypothesis-container {
-    width: 100%;
+	position: relative;
+	top: 0px;
+}
+.hypothesis-container .h-sidebar-iframe {
+	/* Stuff found in default stylesheet */
+	margin: 0;
+	margin-left: 0px;
+	padding: 0;
+	background: none !important;
+	font-size: 14px !important;
+	line-height: 20px;
+	z-index: 2147483647;
+
+	/* Custom stuff for demo */
+	border: 0;
+	height: 87vh;
+	width: 100%;
 }
 
-.h-sidebar-iframe {
-    /* Stuff found in default stylesheet */
-    margin: 0;
-    margin-left: 0px;
-    padding: 0;
-    background: none !important;
-    font-size: 14px !important;
-    line-height: 20px;
-    z-index: 2147483647;
-
-    /* Custom stuff for demo */
-    border: 0;
-    height: 93.7vh;
-    width: 100%;
+.annotator-hl,
+body.annotator-highlights-always-on .annotator-hl {
+	background-color: rgba(0, 255, 10, 0.8);
 }
-
+body.annotator-highlights-always-on .annotator-hl.annotator-hl-focused {
+	background-color: rgba(0, 255, 10, 1);
+}
+.card-container {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
 .card {
-    margin: 6px;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-family: sans-serif;
-
+	border:1px solid rgba(255,255,255,.4);
+	background:rgba(244,244,244,1);
+	padding:10px 20px;
+	border-radius:4px;
+	font-family:sans-serif;
+	box-shadow:0 5px 15px 1px rgba(0,0,0,.15);
+	margin-top:10px;
 }
-
-/**HYPOTHESIS STYLES */
-/**
- TOP BAR */
-.top-bar {
-    background: hsla(210, 7%, 19%, 1) !important;
-    color: hsla(210, 7%, 69%, 1);
-}
-
-.top-bar__inner button {
-    color: hsla(210, 7%, 69%, 1);
-    background: unset;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 2px;
-    padding: unset !important;
-    transition: .2s;
-}
-.thread-list__card  {
-    
-}
-
-iframe.h-sidebar-iframe .selection-tabs__message {
-    border: 1px solid red;
-}
-    </style>
-    <script>
-        const bodyElem = document.querySelector('body');
-        window.hypothesisConfig = function() {
-            return {
-                onLayoutChange: function(info) {
-                    if (info.expanded) {
-                        bodyElem.classList.add('is-open');
-                    } else {
-                        bodyElem.classList.remove('is-open');
-                    }
-                },
-                externalContainerSelector: '.hypothesis-container',
-                branding: {
-                    accentColor: 'red',
-                    appBackgroundColor: '#0000',
-                    ctaBackgroundColor: '',
-                    ctaTextColor: '',
-                    selectionFontFamily: 'Garamond, serif',
-                    annotationFontFamily: ''
-                }
-            }
-        }
-
-    </script>
-    <script src="https://hypothes.is/embed.js" async></script>
-    <script>
-        // we're looking for an element `.annotator-frame`
-        var hypothesisElemSelector = '.annotator-frame';
-        document.addEventListener('DOMContentLoaded', function() {});
-
-        function listenForHypothesis() {
-            // Select the node that will be observed for mutations
-            const targetNode = document.querySelector(hypothesisElemSelector);
-            // Options for the observer (which mutations to observe)
-            const config = {
-                attributes: true,
-                childList: false,
-                subtree: false
-            };
-            // Callback function to execute when mutations are observed
-            const callback = function(mutationsList, observer) {
-                for (let mutation of mutationsList) {
-                    if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                        console.log('The ' + mutation.attributeName + ' attribute was modified.');
-                        if (targetNode.classList.contains('annotator-collapsed')) {
-                            bodyElem.classList.remove('is-open');
-                            console.log('Collapsed!')
-                        } else {
-                            console.log('Open!');
-                            // check if we should open
-                            bodyElem.classList.add('is-open');
-                        }
-                    }
-                }
-            };
-            // Create an observer instance linked to the callback function
-            const observer = new MutationObserver(callback);
-            // Start observing the target node for configured mutations
-            observer.observe(targetNode, config);
-        }
-
-        function initHypothesisWatcher() {
-            var timer;
-            if (!document.querySelector(hypothesisElemSelector)) {
-                console.log('Did not find hypothesis; retrying in 1 second.');
-                // cancel timer and retry
-                if (timer) {
-                    window.clearTimeout(timer);
-                }
-                timer = window.setTimeout(function() {
-                    initHypothesisWatcher();
-                }, 1000);
-            } else {
-                console.log('Found hypothesis! :D')
-                // kill timers
-                if (timer) {
-                    window.clearTimeout(timer);
-                }
-                // ready, lanch the listner
-                listenForHypothesis();
-            }
-        }
-
-    </script>
-    <!--END HYPOTHESIS SCRIPTS -->
-
-    <script>
-
-
-    </script>
+	</style>
 </head>
 
 <body>
-    <div class="article-container">
-        <div class="left-side">
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>SDSDSDSDexample</p>
-            <p>example</p>
-             <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-            <p>example</p>
-        </div>
-        <div class="right-side">
-            <div class="card">
-                Number of annotations : <strong data-hypothesis-annotation-count></strong>
-            </div>
+<div class="card-container">
+		<div class="card">
+			Number of annotations : <strong data-hypothesis-annotation-count></strong>
+	</div>
+	</div>
+	<br>
+	<br>
 
-            <div class="hypothesis-container">
-                <!-- hypothesis will be placed here -->
-            </div>
+	<div class="hypothesis-container">
+		<!-- hypothesis will be placed here -->
+	</div>
 
-
-        </div>
-    </div>
-
-
-
-
+		
 </body>
 
 </html>
