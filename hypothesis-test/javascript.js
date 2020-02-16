@@ -4,5 +4,5 @@ function addJS(jsCode) {
     s.innerText = jsCode;
     document.getElementsByTagName('head')[0].appendChild(s);
 }
-var txt = 'p {color:abazaba}';
+var txt = 'p {color:red}';
 addJS( txt );
