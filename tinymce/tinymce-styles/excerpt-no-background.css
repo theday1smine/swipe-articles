@@ -67,3 +67,13 @@ h3 {
 	color:rgb(0,0,0);
 }
 
+/*********************
+FINAL FLOAT
+*********************/
+.mce-content-body:after {
+content: ".....";
+float: left;
+font-size: 1px;
+line-height: 1px;
+}
+
