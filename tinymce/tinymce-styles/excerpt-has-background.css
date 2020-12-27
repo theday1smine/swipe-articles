@@ -46,7 +46,7 @@ ul li div {
 }
 
 b, strong {
-	color:rgb(0,0,0);
+	color:rgb(0,0,0)!important;
 	font-weight:900;
 	-webkit-font-smoothing:subpixel-antialiased;
 	font-smoothing:subpixel-antialiased;
@@ -55,26 +55,16 @@ b, strong {
 h1 {
 	font-size: 30px;
 	line-height:32px;
-	color:rgb(0,0,0);
+	color:rgb(0,0,0)!important;
 }
 h2 {
 	font-size: 26px;
 	line-height:30px;
-	color:rgb(0,0,0);
+	color:rgb(0,0,0)!important;
 }
 h3 {
 	font-size: 22px;
 	line-height:26px;
-	color:rgb(0,0,0);
+	color:rgb(0,0,0)!important;
 }
 
-
-/*********************
-FINAL FLOAT
-*********************/
-.mce-content-body:after {
-content: ".....";
-float: left;
-font-size: 1px;
-line-height: 1px;
-}
