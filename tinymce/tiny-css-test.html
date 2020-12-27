@@ -9,58 +9,7 @@
 </head>
 
 <body>
-<style>
-/*///////////////////////
-UNORDERED LISTS
-///////////////////////*/
 
-*, ul li, ol li  {
-	font-family:Lucida Grande, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Source Sans Pro, sans-serif;
-	color:rgb(75,75,75);
-	font-size: 14.5px;
-	line-height: 19px;
-	letter-spacing:-.2px ;
-}
-p, div {
-	margin-top: 13px;
-	margin-bottom: 0px;
-}
-ul {
-	padding: 0;
-	list-style: none;
-	list-style-image: none;
-	margin-left:40px;
-	padding-left:0px;
-}
-ul li {
-	letter-spacing: -0px;
-	font-weight: 500;
-	list-style-type:disc;
-	text-align: left;
-	margin-bottom: 2px;
-	margin-top: 6.5px;
-	display: list-item;
-	padding-left:0px !important;
-	margin-left:0px;
-}
-ul li div {
-	
-}
-
-
-h1 {
-	font-size: 30px;
-	line-height:32px;
-}
-h2 {
-	font-size: 26px;
-	line-height:30px;
-}
-h3 {
-	font-size: 22px;
-	line-height:26px;
-}
-	</style>
 <textarea id="full-featured-non-premium">
 
 <div style="letter-spacing: normal; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; word-spacing: 0px; -webkit-text-stroke-width: 0px; caret-color: #green; margin: 0px auto; min-height: 100px; padding: 10px; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; background-color: rgba(180, 180, 180, 0.1); orphans: 2; widows: 2; color: #4b4b4b; font-size: 22px; line-height: 19px; font-family: 'Lucida Grande', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'Source Sans Pro', sans-serif;">
@@ -97,6 +46,7 @@ h3 {
 		var useDarkMode = window.matchMedia("(prefers-color-scheme: light)").matches;
 		tinymce.init({
 			selector: "textarea#full-featured-non-premium",
+			content_css : 'tiny-custom.css',
 			plugins: "print preview powerpaste casechange importcss tinydrive searchreplace autolink autosave save directionality advcode visualblocks visualchars fullscreen image link media mediaembed template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists checklist wordcount tinymcespellchecker a11ychecker imagetools textpattern noneditable help formatpainter permanentpenx pageembed charmap mentions quickbars linkchecker emoticons advtable",
 			imagetools_cors_hosts: ["picsum.photos"],
 			menubar: "file edit view insert format tools table help",
@@ -195,18 +145,7 @@ function my_mce_buttons_2( $buttons ) {
 // Register our callback to the appropriate filter
 add_filter( 'mce_buttons_2', 'my_mce_buttons_2' );
 	</script>
-	<script>
-		tinymce.init({
-// File: http://domain.mine/mysite/index.html
 
-tinymce.init({
-  selector: 'textarea', 
-  content_css : 'tiny-custom.css'
-});
-
-
-});
-	</script>
 </body>
 
 </html>
