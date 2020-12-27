@@ -44,17 +44,26 @@ ul li {
 ul li div {
 	
 }
-
-
+b, strong {
+	color:rgb(0,0,0);
+	font-weight:900;
+	-webkit-font-smoothing:subpixel-antialiased;
+	font-smoothing:subpixel-antialiased;
+	letter-spacing:-.3px;
+}
 h1 {
 	font-size: 30px;
 	line-height:32px;
+	color:rgb(0,0,0);
 }
 h2 {
 	font-size: 26px;
 	line-height:30px;
+	color:rgb(0,0,0);
 }
 h3 {
 	font-size: 22px;
 	line-height:26px;
+	color:rgb(0,0,0);
 }
+
