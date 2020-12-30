@@ -18,7 +18,9 @@ pre{
 	margin-top:0px !important;
 	margin-bottom:0px !important;
 	font-family:monospace,menlo,sans-serif;
-
+}
+pre * {
+	font-family:monospace,menlo,sans-serif !important;
 }
 
 pre .syntax-comment {
@@ -56,8 +58,7 @@ body {
 UNORDERED LISTS
 ///////////////////////*/
 
-*, ul li, ol li  {
-	font-family:Lucida Grande, -apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Source Sans Pro, sans-serif;
+ul li, ol li  {
 	color:rgb(75,75,75);
 	font-size: 14.5px;
 	line-height: 19px;
