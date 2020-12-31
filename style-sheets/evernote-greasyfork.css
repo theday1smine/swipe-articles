@@ -404,7 +404,6 @@ ACTUAL IMAGE
  DARK THEME
  ************************
  ************************/
-
-[data-color-theme="dark"] {}
-
-...
+en-note, body {
+	background:rgb(255,0,0) !important;
+}
