@@ -16,7 +16,7 @@ pre {
 	color: rgb(0, 0, 0);
 	margin-top: 0px !important;
 	margin-bottom: 0px !important;
-	font-family: SFMono-Regular, monospace, sans-serif;
+	font-family: Monaco,Menlo,Consolas,Courier New,monospace;
 	position: relative;
 }
 pre * {
@@ -62,13 +62,13 @@ END CODE
 	justify-content:center;
 	align-items:center;
 	border-radius: 4px;
-	height: 15px;
+	height: 16px;
 	font-size: 11.5px;
 	line-height:19px;
-	color: rgba(0, 0, 0, 0.6);
-	font-family: monospace;
+	color: rgba(0, 0, 0, 0.7);
+	font-family: Monaco,Menlo,Consolas,Courier New,monospace;
 	padding: 1px 8px;
-	background: rgba(190, 190, 190, 0.2);
+	background: rgba(190, 190, 190, 0.25);
 }
 
 
