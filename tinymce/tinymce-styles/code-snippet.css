@@ -24,16 +24,16 @@ pre * {
 }
 
 pre .syntax-comment {
-	color: #6a737d;
+	color: hsl(212, 9%, 46%);;
 }
 pre .syntax-entity {
-	color: #6f42c1;
+	color: hsl(261, 80%, 41%);
 }
 pre .syntax-constant {
-	color: #005cc5;
+	color: hsl(212, 100%, 40%);
 }
 pre .syntax-keyword {
-	color: #d73a49;
+	color: hsl(355, 67%, 54%);
 }
 
 /*///////////////////////
