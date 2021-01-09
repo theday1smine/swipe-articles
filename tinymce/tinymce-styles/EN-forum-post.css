@@ -1,0 +1,314 @@
+.cPost {
+	font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+		"Segoe UI Symbol";
+	font-size: 13.5px;
+	line-height: 1.5;
+	margin: 0 auto;
+	min-height: 10px;
+	padding: 10px;
+	border-radius: 5px;
+	background: rgba(180, 180, 180, 0.1);
+	color: #4b4b4b;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: ;
+}
+
+body,
+p {
+	font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+		"Segoe UI Symbol";
+	font-size: 13.5px;
+	line-height: 1.5;
+}
+.ipsComment_content p {
+	margin-top: 12px !important;
+	margin-bottom: 10px !important;
+}
+.cAuthorPane_mobile.ipsResponsive_showPhone,
+.ipsResponsive_showPhone.ipsComment_badges {
+	display: none;
+	order: 5;
+}
+img {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+}
+
+/************
+ CONTAINER
+ ************/
+.cPost {
+	max-width: 100%;
+	margin: 0 auto;
+	margin: 0 !important;
+	position: relative;
+}
+/************
+ LEFT COLUMN 
+ ************/
+.ipsComment_author {
+	width: 200px;
+	max-width: 100%;
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 3;
+	text-align: center;
+	position: relative;
+	padding-top: 0px;
+	margin-bottom: 20px;
+}
+.ipsComment_author h3,
+.ipsComment_author h3 a {
+	font-size: 20px;
+	text-align: center !important;
+}
+.ipsComment_author ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-family: Source Sans Pro, Gilroy, -apple-system, sans-serif;
+}
+.ipsType_break {
+	margin: 0 auto;
+}
+.ipsComment_author a {
+	text-decoration: none;
+	color: black;
+}
+.ipsComment_author li {
+	list-style: none;
+	padding: 0;
+}
+.cAuthorPane_photo img {
+	border-radius: 100%;
+	margin: 0 auto;
+	display: block;
+	width: 100%;
+	height: 100%;
+	max-width: 90px;
+	object-fit: cover;
+	margin-top: 20px;
+}
+img.cAuthorGroupIcon {
+	width: 180px;
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+}
+.ipsRepBadge_positive,
+.ipsRepBadge_positive:hover {
+	color: #2c8c69 !important;
+	position: relative;
+}
+
+.fa-plus-circle {
+	content: "+";
+	position: relative;
+	width: 13px;
+	height: 13px;
+	background: #2c8c69;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 100px;
+	margin-top: -2px;
+}
+a.ipsRepBadge {
+	color: #2c8c69 !important;
+	font-weight: 500;
+}
+.fa-plus-circle:before {
+	position: absolute;
+	font-size: 14px;
+	font-style: normal;
+	color: white;
+	left: 0;
+	right: 0;
+	top: -5.5px;
+	bottom: 0;
+	z-index: 1000;
+}
+.cAuthorPane_info .ipsType_light {
+	color: rgba(100, 100, 100, 0.6);
+}
+[data-role="authorPane-follow"] a.ipsButton.ipsButton_primary {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(100, 100, 100, 0.2);
+	border-radius: 4px;
+	height: 30px;
+	width: 130px;
+	margin: 0 auto;
+	margin-top: 8px;
+	margin-bottom: -4px;
+	color: hsl(0, 0%, 32.16%);
+	font-weight: 600;
+	font-size: 11.5px;
+	-webkit-font-smoothing: antialiased;
+}
+.ipsResponsive_hidePhone.ipsType_break {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 150px;
+	opacity: 0.8;
+	margin-top: 6px;
+	font-size: 12px;
+}
+
+/************
+ RIGHT COLUMN 
+ ************/
+.ipsComment_content {
+	display: block;
+	max-width: 100%;
+}
+.ipsComment_content li {
+	margin-top: 0px;
+	margin-bottom: 1px;
+	list-style: disc !important;
+	line-height: 1.6;
+	list-style-type: disc !important;
+	display:list-item;
+}
+.ipsComment_content ul {
+	margin-top: 14px;
+	margin-bottom: 18px;
+	list-style-type:disc !important;
+}
+.ipsColumn.ipsColumn_fluid {
+	max-width: 100%;
+	min-width: 60%;
+	margin: 0 auto;
+	overflow: hidden;
+	white-space: normal;
+}
+
+/*FLEX*/
+.ipsFlex {
+	display: flex;
+}
+.ipsComment_meta {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	max-width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	list-style: none;
+	padding: 0;
+	min-height: 55px;
+	width: 100% !important;
+	min-width: 100% !important;
+	position: relative;
+	margin-bottom: 20px;
+	margin-top: 0px;
+}
+.ipsComment_meta li,
+.ipsComment_meta ul,
+.ipsComment_meta ol {
+	margin: 0;
+	padding: 0;
+}
+ipsType_richText ul {
+}
+.ipsComment_toolWrap .ipsComment_badges {
+	margin-bottom: 4px;
+}
+/*POSTED ON DATE LINK*/
+.ipsComment_meta .ipsType_reset.ipsResponsive_hidePhone {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	order: 1;
+}
+a.ipsType_blendLinks {
+	padding: 1.5px 9px;
+	margin: 0 2px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-decoration: none;
+	color: rgb(100, 100, 100, 0.7);
+	box-shadow: inset 0 0 0 1px rgb(100, 100, 100, 0.4);
+	z-index: 1000;
+	border-radius: 20px;
+	font-family: Source Sans Pro, -apple-system, sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+	max-width: 200px !important;
+	display: block;
+	margin-bottom: 4px;
+}
+
+.ipsComment_toolWrap {
+	display: flex;
+	align-items: space-around;
+	padding: 0;
+	margin: 0;
+	flex-wrap: wrap;
+	order: 2;
+}
+.ipsComment_toolWrap .ipsComment_badges {
+	display: flex;
+	flex-wrap: wrap;
+}
+.ipsComment_toolWrap li {
+	font-family: Source Sans Pro, -apple-system, sans-serif;
+	font-size: 12px;
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5px 3px;
+}
+.ipsComment_toolWrap .ipsResponsive_hidePhone.ipsComment_badges li strong {
+	font-weight: 600;
+}
+
+.ipsComment_toolWrap .ipsResponsive_hidePhone.ipsComment_badges li:first-child {
+	background: hsl(38, 60%, 91%);
+	color: #856834 !important;
+}
+.ipsComment_toolWrap .ipsResponsive_hidePhone.ipsComment_badges li:last-child {
+	background: hsl(153, 29%, 90.5%);
+	color: hsl(158.13, 53.17%, 36.08%) !important;
+}
+.ipsComment_toolWrap a {
+	text-decoration: none !important;
+}
+.ipsComment_toolWrap ul.ipsComment_tools li a {
+	color: rgba(90, 90, 90, 0.6) !important;
+	font-weight: 600;
+}
+.ipsComment_toolWrap ul.ipsComment_tools {
+	background: rgba(190, 190, 190, 0.2);
+	padding: 0.5px 2px;
+	border-radius: 10px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	margin-left: 2px;
+	margin-bottom: 4px;
+}
+
+.ipsComment_toolWrap .ipsComment_badges li {
+	padding: 2px 7px;
+	margin: 0 2px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/*END FLEX*/
+.cPost_contentWrap {
+}
+.ipsType_richText > p:first-child {
+	margin-top: 0;
+}
+
