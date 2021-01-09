@@ -208,7 +208,7 @@ a.ipsRepBadge {
 	flex-direction: row;
 	list-style: none;
 	padding: 0;
-	min-height: 55px;
+	min-height: 35px;
 	width: 100% !important;
 	min-width: 100% !important;
 	position: relative;
