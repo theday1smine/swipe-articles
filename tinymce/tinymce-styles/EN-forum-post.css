@@ -160,6 +160,10 @@ a.ipsRepBadge {
 	font-size: 12px;
 }
 
+.ipsResponsive_showPhone.ipsResponsive_block {
+	display: none;
+}
+
 /************
  RIGHT COLUMN 
  ************/
@@ -173,12 +177,12 @@ a.ipsRepBadge {
 	list-style: disc !important;
 	line-height: 1.6;
 	list-style-type: disc !important;
-	display:list-item;
+	display: list-item;
 }
 .ipsComment_content ul {
 	margin-top: 14px;
 	margin-bottom: 18px;
-	list-style-type:disc !important;
+	list-style-type: disc !important;
 }
 .ipsColumn.ipsColumn_fluid {
 	max-width: 100%;
@@ -306,9 +310,22 @@ a.ipsType_blendLinks {
 }
 
 /*END FLEX*/
+
 .cPost_contentWrap {
 }
 .ipsType_richText > p:first-child {
 	margin-top: 0;
+}
+
+.ipsPadding_bottom {
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(190, 190, 190, 0.6);
+}
+
+.ipsItemControls {
+	display: none;
+}
+.cPostShareMenu {
+	display: none;
 }
 
