@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    min-width: 1px;
+}
+
+body {
+    display: block;
+    width: 100%;
+    max-width: 690px;
+    font-family: Source Sans Pro, -apple-system, helvetica, arial, sans-serif;
+    color: rgb(50, 50, 50);
+    font-size: 18px;
+    line-height: 26px;
+    background-color: rgb(150, 150, 150, .1);
+    padding: 10px;
+    margin: 0 auto;
+}
+p {
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+
+strong,
+b {
+    Color: rgb(20, 20, 20)
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 strong,
+h1 b,
+h2 strong,
+h2 b,
+h3 strong,
+h3 b,
+h4 strong,
+h4 b,
+h5 strong,
+h5 b,
+h6 strong,
+h6 b {
+    color: rgb(0, 0, 0) !important;
+}
+h2 {
+  font-size: 32px;
+  line-height: 37px;
+  margin-bottom: 15px;
+  margin-top: 32px;
+  text-align: center;
+}
+h3 {
+  font-size: 30px;
+  line-height: 35px;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+h3 + h3 {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 600;
+  margin-top: -8px;
+  margin-bottom: 25px;
+}
+
+h4 {
+  font-size: 25px;
+  line-height: 29px;
+  margin-top: 35px;
+  margin-bottom: 10px;
+}
+h4 + h4 {
+  font-size: 20.5px;
+  line-height: 30px;
+  margin-top: -5px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  
+}
+.textbox2 {
+  border: 2px solid rgb(150, 150, 150, .16);
+  border-radius: 7px;
+  background-color: rgb(150, 150, 150, .1);
+  
+  padding: 15px;
+  display:block;
+  margin:0 auto;
+}
+.text-box-inner {
+  max-width:600px;
+  display:block;
+  margin:0 auto;
+}
+
+.content-box-fcc, .textbox5 {
+  background-color: rgb(150, 150, 150, .15);
+  border: 1px solid rgb(150, 150, 150, .16);
+  padding: 15px;
+}
+
+.content-box-fcc h4, .textbox5 h4{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: -10px;
+}
+
+.content-box-fcc h3, .textbox5 h3{
+  margin-top: 20px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+.wp-caption-text, .wp-caption-text strong, .wp-caption-text b {
+  text-align: center;
+  color: rgb(85,85,85);
+  font-size: 15px;
+  line-height: 21px;
+  margin-top: 0px;
+  max-width: 450px;
+  margin: 0 auto;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+video {
+  border-radius: 8px;
+  border: 1px solid rgba(150,150,150,.5);
+  margin-top: 14px;
+  margin-bottom: 14px;
+  max-width:100%;
+}
+
+/*******************************************
+ *******************************************
+ *******************************************
+ LISTS
+ *******************************************
+ *******************************************
+ ********************************************/
+
+/*******************************************
+ UNORDERED LISTS
+ ********************************************/
+
+ol,
+ul {
+    list-style-type: none;
+    list-style: none;
+    margin-top: 3px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+ol li,
+ul li {
+    padding: 0px;
+    margin-left: 0px;
+    margin-bottom: 5px;
+}
+
+ol li {
+    display: list-item;
+    list-style: decimal;
+}
+
+ul li {
+    display: list-item;
+    list-style: disc;
+    padding: 0px;
+}
+
+/*******************************************
+ ORDERED LIST - FIRST LEVEL
+ ********************************************/
+
+ol {
+    list-style: none;
+    counter-reset: numbers;
+}
+
+ol li {
+    counter-increment: numbers;
+}
+
+ol li:before {
+
+}
+
+
+.half-h {
+    position: relative;
+    text-align: left;
+
+    display: block;
+
+    width: 100%;
+    margin: 0 auto;
+}
+
+.half-h h1 {
+    position: relative;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+    margin-top: 20px;
+    top: 0;
+    text-align: CENTER;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-family:
+        "AppleGothic", sans-serif;
+    letter-spacing: 4px;
+    color: hsl(0, 0%, 35%) !important;
+    text-shadow:
+        0 2px 0 hsl(0, 0%, 16%),
+        0 3px 0 hsl(0, 0%, 15%),
+        0 4px 0 hsl(0, 0%, 14%),
+        0 5px 0 hsl(0, 0%, 13%),
+        0 6px 0 hsl(0, 0%, 12%),
+        0 7px 0 hsl(0, 0%, 11%),
+        0 8px 0 hsl(0, 0%, 10%),
+        0 9px 0 hsl(0, 0%, 9%),
+        0 10px 0 hsl(0, 0%, 8%),
+        0 11px 0 hsl(0, 0%, 7%),
+        0 12px 0 hsl(0, 0%, 6%),
+        0 13px 0 hsl(0, 0%, 5%),
+        0 14px 0 hsl(0, 0%, 4%),
+        0 15px 0 hsl(0, 0%, 3%),
+        0 15.5px 2px rgba(0, 0, 0, .1),
+        0 16.5px 2.5px rgba(0, 0, 0, .1),
+        0 16px 2.5px rgba(0, 0, 0, .15),
+        0 16.5px 2.5px rgba(0, 0, 0, .15),
+        0 17px 3px rgba(0, 0, 0, .15),
+        0 17.5px 3.5px rgba(0, 0, 0, .15),
+        0 18px 4px rgba(0, 0, 0, .15),
+        0 21px 6px rgba(0, 0, 0, .15),
+        0 23px 8px rgba(0, 0, 0, .15),
+        0 22px 9px rgba(0, 0, 0, .15),
+        0 23px 10px rgba(0, 0, 0, .1)
+}
+
+.half-h h2 {
+    position: absolute;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: #666666;
+    padding-top: 222px;
+    text-align: center;
+    font-family: Baskerville;
+    font-size: 1.5em;
+    font-weight: 500;
+    text-shadow: -1px -1px 1px #333, 2px 2px 1px #363636;
+}
