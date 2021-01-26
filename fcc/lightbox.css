@@ -7,27 +7,42 @@
  ************************
  ************************
  ************************/
+ .featherlight {
+ 	margin:0 auto !important;
+ 	padding-top:10px;
+ 	padding-bottom:10px !important;
+ 	position: fixed;
+ 	display: block;
+ 	max-height:100%;
+ 	height:100%;
+ 	top:0 !important;
+ 	
+ 	
+ }
+ .long-image{
+ 	top:0 !important;
+
+ }
 .long-image .featherlight-content {
 	width: 98% !important;
 	margin: 0 auto !important;
-	background: white !important;
+	background: transparent !important;
 	padding: 0px !important;
 	top: 0 !important;
-	max-height: 98% !important;
+	max-height: 100% !important;
 	bottom: 0px !important;
-	top: 0px !important;
 	border:0px !important;
-	border-radius:5px !important;
-	vertical-align: top !important;
-	margin-top:10px !important;
-	margin-bottom:20px !important;
+	border-radius:8px !important;
+
+
 }
 .long-image .featherlight-content img.featherlight-image {
 	border: 1px solid green !important;
 	padding: 0px !important;
 	width: 100% !important;
 	height: auto !important;
-	border:0px !important
+	border:0px !important;
+	margin-top:0px
 }
 img[data-featherlight]:hover {
 	cursor: pointer
@@ -40,7 +55,10 @@ img[data-featherlight]:hover {
 	width: 45px !important;
 	font-size: 30px !important;
 }
-
+.long-image img {
+	max-width:100% !important;
+	box-shadow:none !important;
+}
 /************************
  ************************
  ************************
@@ -66,13 +84,20 @@ html.with-featherlight {
 	background: rgba(0, 0, 0, 0)
 }
 .featherlight:last-of-type {
-	background: rgba(0, 0, 0, .8)
+	background: rgba(0, 0, 0, .1);
+	top:-100px;
+	left:0;
+	right:0;
+	bottom:0;
+	-webkit-backdrop-filter:blur(15px);
+	backdrop-filter:blur(15px);
+	z-index: 1090900000;
 }
 .featherlight:before {
 	content: '';
 	display: inline-block;
 	height: 100%;
-	vertical-align: middle
+	vertical-align: middle;
 }
 .featherlight .featherlight-content {
 	position: relative;
@@ -87,10 +112,10 @@ html.with-featherlight {
 	max-height: 95%;
 	background: #fff;
 	cursor: auto;
-	white-space: normal
+	white-space: normal;
 }
 .featherlight .featherlight-inner {
-	display: block
+	display: block;
 }
 .featherlight link.featherlight-inner, .featherlight script.featherlight-inner, .featherlight style.featherlight-inner {
 	display: none
@@ -100,16 +125,52 @@ html.with-featherlight {
 	z-index: 9999;
 	top: 0;
 	right: 0;
-	line-height: 25px;
-	width: 25px;
+	line-height: 0;
+	width: 50px !important;
+	height:50px !Important;
+	content:"" !important;
 	cursor: pointer;
 	text-align: center;
 	font-family: Arial, sans-serif;
 	background: #fff;
-	background: rgba(255, 255, 255, .3);
-	color: #000;
+	background: rgba(0, 0, 0, .25);
+	color: rgba(0,0,0,0);
 	border: 0;
-	padding: 0
+	padding: 0;
+	border-radius:7px;
+	-webkit-backdrop-filter:blur(15px);
+	backdrop-filter:blur(15px);
+}
+.featherlight .featherlight-close-icon:before {
+	content:"";
+	display:block;
+	z-index: 10000000000;
+	width:40px;
+	height:3px;
+	background:rgb(250,250,250,.4);
+	border-radius:1.5px/1.5px;
+	right:5px;
+	transform:rotate(45deg);
+	top:24px;
+	position: absolute;
+	transition:.25s
+}
+.featherlight .featherlight-close-icon:after {
+	content:"";
+	display:block;
+	z-index: 10000000000;
+	width:40px;
+	height:3px;
+	background:rgb(250,250,250,.4);
+	border-radius:1.5px/1.5px;
+	right:5px;
+	transform:rotate(-45deg);
+	top:24px;
+	position: absolute;
+	transition:.2s
+}
+.featherlight .featherlight-close-icon:hover:before, .featherlight .featherlight-close-icon:hover:after{
+	background:rgb(255,255,255,1);
 }
 .featherlight .featherlight-close-icon::-moz-focus-inner {
 	border: 0;
@@ -136,7 +197,7 @@ html.with-featherlight {
 		margin-left: 0;
 		margin-right: 0;
 		max-height: 98%;
-		padding: 10px 10px 0;
+
 		border-bottom: 10px solid transparent
 	}
 }
