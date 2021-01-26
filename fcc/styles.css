@@ -15,13 +15,13 @@ body {
     color: rgb(50, 50, 50);
     font-size: 18px;
     line-height: 26px;
-    background-color: rgb(150, 150, 150, .1);
+    background-color: rgb(150, 150, 150, .05);
     padding: 10px;
     margin: 0 auto;
 }
 p,div {
-  margin-top: 14px;
-  margin-bottom: 14px;
+  margin-top: 19px;
+  margin-bottom: 19px;
 }
 
 strong,
@@ -52,8 +52,8 @@ h6 b {
 h2 {
   font-size: 32px;
   line-height: 37px;
-  margin-bottom: 15px;
-  margin-top: 32px;
+  margin-bottom: 55px;
+  margin-top: 55px;
   text-align: center;
 }
 h3 {
@@ -82,43 +82,23 @@ h4 + h4 {
   margin-top: -5px;
   font-weight: 600;
   margin-bottom: 18px;
-  
 }
-.textbox2 {
-  border: 2px solid rgb(150, 150, 150, .16);
-  border-radius: 7px;
-  background-color: rgb(150, 150, 150, .1);
-  
-  padding: 15px;
-  display:block;
-  margin:0 auto;
-    max-width:600px !important;
-}
-.text-box-inner {
-  max-width:600px;
-  display:block;
-  margin:0 auto;
-}
-
-.content-box-fcc, .textbox5 {
-  background-color: rgb(150, 150, 150, .15);
-  border: 1px solid rgb(150, 150, 150, .16);
-  padding: 15px;
-}
-
-.content-box-fcc h4, .textbox5 h4{
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: -10px;
-}
-
-.content-box-fcc h3, .textbox5 h3{
-  margin-top: 20px;
+.centered {
+	text-align:center;
 }
 
 img {
     display: block;
     max-width: 100%;
+    margin:0 auto;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+.no-border {
+	border:none;
+}
+.no-box-shadow {
+	box-shadow:none !important;
 }
 .wp-caption-text, .wp-caption-text strong, .wp-caption-text b {
   text-align: center;
@@ -137,6 +117,65 @@ video {
   margin-top: 14px;
   margin-bottom: 14px;
   max-width:100%;
+}
+/*******************************************
+ *******************************************
+ *******************************************
+ TEXT BOXES
+ *******************************************
+ *******************************************
+ ********************************************/
+ 
+ 
+/*******************************************
+ TEXT BOX 2
+ ********************************************/
+.textbox2 {
+  border: 2px solid rgb(150, 150, 150, .12);
+  border-radius: 7px;
+  background-color: rgb(150, 150, 150, .075);
+  display:block;
+  margin:0 auto;
+  max-width:600px !important;
+  width: 600px;
+}
+.text-box-inner {
+  max-width:580px;
+  display:block;
+  margin:0 auto;
+  padding: 15px;
+}
+/*******************************************
+ TEXT BOX 5
+ ********************************************/
+.content-box-fcc, .textbox5 {
+  background-color: rgb(150, 150, 150, .15);
+  border: 1px solid rgb(150, 150, 150, .16);
+  padding: 15px;
+}
+
+.content-box-fcc h4, .textbox5 h4{
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: -10px;
+}
+.content-box-fcc h3, .textbox5 h3{
+  margin-top: 20px;
+}
+
+/*******************************************
+ TEXT BOX 7
+ ********************************************/
+.textbox7 {
+  background:rgba(160,160,160,.1);
+  border:1px solid rgba(150,150,150,.1);
+  padding:15px;
+  margin-bottom:35px;
+  margin-top:35px;
+}
+.textbox7 h2, .textbox7 h3{
+	margin-top:17px;
+	margin-bottom:20px;
 }
 
 /*******************************************
