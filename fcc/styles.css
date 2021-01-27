@@ -59,14 +59,14 @@ h2 {
   text-transform: uppercase;
 }
 h2.sub-head{
-	font-size:22px;
-	line-height:29px;
-	margin-bottom:55px;
-	margin-top:15px;
-	font-style:italic;
-	color:rgb(100,100,100) !important;
-	text-transform: unset;
-	font-family:Source Serif Pro, Georgia, Baskerville, serif;
+	font-size:22px !important;
+	line-height:29px !important;
+	margin-bottom:55px!important;
+	margin-top:15px !important;
+	font-style:italic !important;
+	color:rgb(100,100,100) !important !important;
+	text-transform: unset !important;
+	font-family:Source Serif Pro, Georgia, Baskerville, serif !important;
 }
 h3 {
   font-size: 28px;
