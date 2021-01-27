@@ -73,8 +73,8 @@ h3 + h3 {
 }
 
 h4 {
-  font-size: 22px;
-  line-height: 29px;
+  font-size: 21px;
+  line-height: 27px;
   margin-top: 30px;
   margin-bottom: 0px;
 }
@@ -103,7 +103,10 @@ img {
 .no-box-shadow {
 	box-shadow:none !important;
 }
-figcaption.wp-caption-text, .wp-caption-text.wp-caption-text strong, figcaption.wp-caption-text b {
+figcaption {
+	text-align:center	
+}
+figcaption, figcaption.wp-caption-text, .wp-caption-text.wp-caption-text strong, figcaption.wp-caption-text b {
   text-align: center;
   color: rgb(85,85,85);
   font-size: 15px;
@@ -114,6 +117,7 @@ figcaption.wp-caption-text, .wp-caption-text.wp-caption-text strong, figcaption.
   font-weight: 600;
   margin-bottom: 15px;
 }
+
 video {
   border-radius: 5px;
   border: 1px solid rgba(150,150,150,.5);
@@ -197,7 +201,15 @@ blockquote {
 	margin-top:17px;
 	margin-bottom:20px;
 }
+.green-box {
+    background-color: #d6f5e9;
+    border: 1px solid #98e6c8;
+}
 
+.blue-box{
+    background-color: #d8ecf7;
+    border: 1px solid #afcde3;
+}
 /*******************************************
  *******************************************
  *******************************************
