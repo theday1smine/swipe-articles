@@ -216,6 +216,8 @@ blockquote {
 	margin-top:17px;
 	margin-bottom:20px;
 }
+
+
 .green-box {
     background-color: #d6f5e9;
     border: 1px solid #98e6c8;
@@ -283,6 +285,74 @@ ol li:before {
 }
 
 
+
+
+
+code {
+font-family:monospace;
+font-size:calc(1em - 3px);
+padding:2px 4px;
+border-radius:3.5px;
+background:hsl(348, 54%, 47%,.075);
+
+}
+code, code strong {
+color:hsl(348, 54%, 47%);
+}
+
+
+/****
+ ICONS
+ ****/
+
+.download-pdf {
+	display: block;
+	font-size: calc(1em - 2px);
+	font-weight: 600;
+	font-family: -apple-system, helvetica, arial, sans-serif;
+	border-radius: 4px;
+	background: rgba(150, 150, 150, 0.1);
+	width: 100%
+	max-width: 100%;
+}
+.row.attachment {
+	padding: 0px 0px;
+	margin-top: 0px;
+	height: 52px;
+	display: flex;
+	justify-content: center !important;
+	align-items: center !important;
+}
+.row.attachment:last-of-type {
+	border-top: 1px solid rgba(150, 150, 150, 0.2);
+}
+.download {
+	color: hsl(149, 43%, 49%);
+	font-weight: 700 !important;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+a {
+	text-decoration: none;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.fa-paperclip {
+	content: url(assets/paper-clip-icon.svg);
+	padding-right: 4px;
+	height: 16px;
+	width: 16px;
+	fill: green !important;
+	stroke: 2;
+	min-width: 16px;
+}
+
+/*******************************************
+ BIG TITLES
+ ********************************************/
 .half-h {
     position: relative;
     text-align: left;
