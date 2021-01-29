@@ -49,7 +49,9 @@ h6 b {
     color: rgb(0, 0, 0) !important;
     font-weight:700
 }
-
+.section-title {
+border-top:4px solid red;
+}
 h2 {
   font-size: 36px;
   line-height: 37px;
@@ -342,7 +344,7 @@ color:hsl(348, 54%, 47%);
 }
 
 .download-pdf .fa-paperclip {
-	content: url(assets/paper-clip-icon.svg);
+	content: url(../icons/paper-clip-icon.svg);
 	margin-right:4px;
 	height: 17px;
 	width: 17px;
