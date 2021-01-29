@@ -225,7 +225,7 @@ blockquote {
     border: 1px solid #98e6c8;
 }
 
-.blue-box{
+.blue-box, .content-box-blue{
     background-color: #d8ecf7;
     border: 1px solid #afcde3;
 }
